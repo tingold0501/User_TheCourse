@@ -5,8 +5,7 @@ import AvatarHeader from '../assets/png/avatarHeader.png';
 import GR13 from '../assets/png/Group 13.png';
 import GR7 from '../assets/png/Group 7.png';
 import GR10 from '../assets/png/Group 10.png';
-import OurSuccess from './OurSuccess';
-import CloudSoftWare from './CloudSoftWare';
+
 function Header() {
     return (
         <div>
@@ -77,8 +76,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <OurSuccess/>
-            <CloudSoftWare/>
+        
         </div>
     )
 }
