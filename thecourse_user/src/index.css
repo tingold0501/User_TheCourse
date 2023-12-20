@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-totc1{
+    background-image: url(./assets/png/totc1.png);
+}
+.bg-totc2{
+    background-image: url(./assets/png/totc2.png);
+}
