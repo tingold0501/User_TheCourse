@@ -38,7 +38,7 @@ function TOTC() {
                 </div>
             </section>
             <section className="flex items-center justify-center">
-                <div className="w-[90%] h-[500px] bg-[url('./assets/png/TOTC.png')] bg-cover bg-no-repeat grid grid-cols-2">
+                <div className="w-[90%] h-[550px] bg-[url('./assets/png/TOTC.png')] bg-cover bg-no-repeat grid grid-cols-2">
                     <div>
                         <p className='text-4xl font-medium text-[#2F327D]'>Everything you can do in a physical classroom, <span className='text-[#00CBB8]'>you can do with TOTC</span></p>
                         <p className='text-2xl text-[#696984] font-serif mt-5'>TOTC’s school management software helps traditional and online schools manage scheduling, attendance, payments and virtual classrooms all in one secure cloud-based system.</p>
