@@ -5,6 +5,7 @@ import AvatarHeader from '../assets/png/avatarHeader.png';
 import GR13 from '../assets/png/Group 13.png';
 import GR7 from '../assets/png/Group 7.png';
 import GR10 from '../assets/png/Group 10.png';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
@@ -32,9 +33,12 @@ function Header() {
                             <a href="#_" className="font-medium hover:text-gray-900">Contact</a>
                         </nav>
                         <div className="items-center flex h-full pl-6 ml-6 border-l border-gray-200">
-                            <div className='w-28 h-11 mr-8 rounded-2xl flex items-center justify-center bg-white '>
-                                <a href="#_" className="font-medium hover:text-gray-900">Login</a>
-                            </div>
+                            <Link to='/login'>
+                                <div className='w-28 h-11 mr-8 rounded-2xl flex items-center justify-center bg-white '>
+                                    <a href="#_" className="font-medium hover:text-gray-900">Login</a>
+                                </div>
+                            </Link>
+
                             <div className='w-28 h-11  rounded-2xl flex items-center justify-center bg-slate-300  '>
                                 <a href="#_" className="font-medium hover:text-gray-900">Sign Up</a>
                             </div>
@@ -66,7 +70,7 @@ function Header() {
                                 <p className='absolute top-[16px] left-[150px] font-semibold text-2xl'>250K</p>
                             </div>
                             <div className='absolute top-[-100px] left-[10px]'>
-                            <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="" className="absolute top-2 left-4 rounded-full w-16 h-16 object-cover"/>
+                                <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="" className="absolute top-2 left-4 rounded-full w-16 h-16 object-cover" />
                                 <img src={GR13} alt="" />
                                 <div className='absolute w-40 h-14 rounded-3xl flex items-center justify-center font-semibold text-xl top-[110px] left-[120px] bg-[#D8587E]'>
                                     Join Now
@@ -76,7 +80,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-        
+
         </div>
     )
 }
