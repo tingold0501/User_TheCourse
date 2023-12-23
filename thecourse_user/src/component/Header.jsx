@@ -9,7 +9,12 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     const token = localStorage.getItem('token');
-
+    const logout = () =>{
+        if(localStorage.getItem('token')){
+            localStorage.removeItem('token');
+            window.location.replace('/');
+        }
+    }
     return (
         <div>
             <div className=" bg-[#49BBBD] h-[800px]  w-full rounded-b-[30%] ">
@@ -36,9 +41,9 @@ function Header() {
                         </nav>
                         <div className="items-center flex h-full pl-6 ml-6 border-l border-gray-200">
                             {token ? (
-                                <Link to='/login'>
+                                <Link to=''>
                                     <div className='w-28 h-11 mr-8 rounded-2xl flex items-center justify-center bg-white '>
-                                        <a href="#_" className="font-medium hover:text-gray-900">Log Out</a>
+                                        <a onClick={logout} href="#_" className="font-medium hover:text-gray-900">Log Out</a>
                                     </div>
                                 </Link>
                             ) : (
