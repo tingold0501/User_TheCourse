@@ -8,6 +8,8 @@ import GR10 from '../assets/png/Group 10.png';
 import { Link } from 'react-router-dom';
 
 function Header() {
+    const token = localStorage.getItem('token');
+
     return (
         <div>
             <div className=" bg-[#49BBBD] h-[800px]  w-full rounded-b-[30%] ">
@@ -33,15 +35,24 @@ function Header() {
                             <a href="#_" className="font-medium hover:text-gray-900">Contact</a>
                         </nav>
                         <div className="items-center flex h-full pl-6 ml-6 border-l border-gray-200">
-                            <Link to='/login'>
-                                <div className='w-28 h-11 mr-8 rounded-2xl flex items-center justify-center bg-white '>
-                                    <a href="#_" className="font-medium hover:text-gray-900">Login</a>
+                            {token ? (
+                                <Link to='/login'>
+                                    <div className='w-28 h-11 mr-8 rounded-2xl flex items-center justify-center bg-white '>
+                                        <a href="#_" className="font-medium hover:text-gray-900">Log Out</a>
+                                    </div>
+                                </Link>
+                            ) : (
+                                <div className=' flex'>
+                                    <Link to="/login">
+                                    <div className='w-28 h-11 mr-8 rounded-2xl flex items-center justify-center bg-white '>
+                                        <a href="#_" className="font-medium hover:text-gray-900">Login</a>
+                                    </div>
+                                    </Link>
+                                    <div className='w-28 h-11  rounded-2xl flex items-center justify-center bg-slate-300  '>
+                                        <a href="#_" className="font-medium hover:text-gray-900">Sign Up</a>
+                                    </div>
                                 </div>
-                            </Link>
-
-                            <div className='w-28 h-11  rounded-2xl flex items-center justify-center bg-slate-300  '>
-                                <a href="#_" className="font-medium hover:text-gray-900">Sign Up</a>
-                            </div>
+                            )}
                         </div>
                     </div>
                 </header>
