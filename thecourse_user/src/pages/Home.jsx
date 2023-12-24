@@ -5,6 +5,7 @@ import OurSuccess from '../component/OurSuccess'
 import CloudSoftWare from '../component/CloudSoftWare'
 import TOTC from '../component/TOTC'
 import Footer from '../component/Footer'
+import Contact from '../component/Contact'
 function Home() {
     return (
         <div>
@@ -12,6 +13,7 @@ function Home() {
             <OurSuccess/>
             <CloudSoftWare/>
             <TOTC/>
+            <Contact/>
             <Footer/>
         </div>
     )
