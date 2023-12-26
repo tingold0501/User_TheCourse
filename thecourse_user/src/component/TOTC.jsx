@@ -8,7 +8,7 @@ function TOTC() {
             <section className="py-10 bg-w sm:py-16 lg:py-24 z-40 relative">
                 <div className="container mx-auto">
                     <h2 className="text-3xl font-light text-center text-black sm:text-4xl lg:text-5xl">
-                        What is <span className="block w-full font-light text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-500 lg:inline">TOTC ?
+                        What is <span className="block w-full font-light text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-500 lg:inline">T-Academy ?
                         </span>
                     </h2>
                     <p className="mb-20 text-center mt-4 text-lg text-gray-900">TOTC is a platform that allows educators to create online classes whereby they can store the course materials online; manage assignments, quizzes and exams; monitor due dates; grade results and provide students with feedback all in one place.
