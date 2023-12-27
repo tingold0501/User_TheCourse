@@ -1,12 +1,40 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function HeaderChild() {
+    <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+    />
+    {/* Same as */ }
+    <ToastContainer />
+
     const token = localStorage.getItem('token');
+    const userInfor = JSON.parse(localStorage.getItem("userInfor"));
     const logout = () => {
         if (localStorage.getItem('token')) {
             localStorage.removeItem('token');
+            toast.success('🦄 Log Out Success!', {
+                position: "top-right",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
             window.location.replace('/');
         }
     }
@@ -41,11 +69,15 @@ function HeaderChild() {
                     </nav>
                     <div className="items-center flex h-full pl-6 ml-6 border-l border-gray-200">
                         {token ? (
-                            <Link to=''>
-                                <div className='w-28 h-11 mr-8 rounded-2xl flex items-center justify-center bg-white '>
-                                    <a onClick={logout} href="#_" className="font-medium hover:text-gray-900">Log Out</a>
-                                </div>
-                            </Link>
+                            <div className='w-full flex'>
+                                <img className="w-10 mr-5 h-10 rounded-full" src={userInfor.avatar} alt="Rounded avatar" />
+                                <Link to=''>
+                                    <div className='w-28 h-11 mr-8 rounded-2xl flex items-center justify-center bg-white '>
+                                        <a onClick={logout} href="#_" className="font-medium hover:text-gray-900">Log Out</a>
+                                    </div>
+                                </Link>
+                            </div>
+
                         ) : (
                             <div className=' flex'>
                                 <Link to="/login">
